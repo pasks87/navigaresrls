@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Award, Paintbrush, ClipboardCheck, Building2, Droplets, SwatchBook } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Award, Paintbrush, ClipboardCheck, Building2, Droplets, SwatchBook, Umbrella } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/interior-hero.jpg";
 import facade from "@/assets/facade.jpg";
@@ -9,7 +9,7 @@ import logo from "@/assets/navigare-logo.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "Navigare SRLS | Pitturazione interni, esterni e condomini" },
-    { name: "description", content: "Dal 2018 Navigare SRLS si occupa di pitturazione, finiture e risanamento per appartamenti, uffici e condomini. 40 anni di esperienza tecnica alla direzione. Sopralluogo gratuito: +39 335 662 4576." },
+    { name: "description", content: "Dal 2018 Navigare SRLS si occupa di pitturazione, finiture, risanamento e impermeabilizzazioni con prodotti di ultima generazione per appartamenti, uffici e condomini. Sopralluogo gratuito: +39 335 662 4576." },
     { property: "og:title", content: "Navigare SRLS | Il tuo spazio, una nuova vita" },
     { property: "og:description", content: "Pitturazione di interni ed esterni, manutenzione condominiale e risanamento. Competenza ingegneristica e cura dei dettagli. Richiedi un sopralluogo gratuito." },
     { property: "og:type", content: "website" },
@@ -76,6 +76,7 @@ function Index() {
             <article className="service-icon-card"><Building2 /><h3>Condomini</h3><p>Manutenzione e riqualificazione di scale, androni, facciate e coperture. Gestione dei ponteggi e lavori in quota, con competenza tecnica.</p><a className="service-link" href="#contatti">Parliamo del tuo intervento <ArrowUpRight /></a></article>
             <div className="service-lower">
               <article className="service-icon-card"><Droplets /><h3>Risanamento e antimuffa</h3><p>Trattamenti antimuffa, deumidificazione e ripristino degli intonaci ammalorati. Interventi mirati alle esigenze delle superfici.</p></article>
+              <article className="service-icon-card"><Umbrella /><h3>Impermeabilizzazioni</h3><p>Tetti, terrazzi, balconi e ambienti interrati. Cicli impermeabilizzanti con prodotti di ultima generazione: membrane, resine e guaine elastiche ad alta durabilità.</p></article>
               <article className="service-icon-card"><SwatchBook /><h3>Consulenza tecnica</h3><p>Sopralluogo gratuito, campionature colore, scelta dei materiali certificati e capitolato tecnico. La soluzione giusta, prima di iniziare.</p></article>
             </div>
           </div>
