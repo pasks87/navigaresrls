@@ -200,7 +200,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 .service-icon-card h3 { font-size: 19px; font-weight: 650; margin-bottom: 12px; }
 .service-icon-card p { font-size: 12px; line-height: 1.85; color: var(--muted-foreground); }
 .service-link { display: inline-flex; align-items: center; gap: 9px; font-size: 11px; font-weight: 700; color: var(--primary); margin-top: auto; padding-top: 20px; }.service-link svg { width: 14px; height: 14px; }
-.service-lower { grid-column: span 3; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.service-lower { grid-column: span 3; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .service-lower .service-icon-card { display: grid; grid-template-columns: 45px 1fr; column-gap: 18px; padding: 25px; }.service-lower .service-icon-card > svg { grid-row: span 2; margin: 0; }.service-lower .service-icon-card h3 { margin-bottom: 7px; }
 .about { background: var(--secondary); }
 .about-grid { display: grid; grid-template-columns: .9fr 1fr; gap: 100px; align-items: center; }
