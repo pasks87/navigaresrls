@@ -80,12 +80,6 @@ function CookiePolicy() {
                   <td style={{ padding: "10px 12px" }}>Analitico — terza parte</td>
                   <td style={{ padding: "10px 0 10px 12px" }}><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Google Privacy Policy</a></td>
                 </tr>
-                <tr style={{ borderBottom: "1px solid var(--border)" }}>
-                  <td style={{ padding: "10px 12px 10px 0", fontWeight: 500 }}>Google Fonts</td>
-                  <td style={{ padding: "10px 12px" }}>Caricamento del font Manrope tramite CDN Google</td>
-                  <td style={{ padding: "10px 12px" }}>Tecnico — terza parte</td>
-                  <td style={{ padding: "10px 0 10px 12px" }}><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Google Privacy Policy</a></td>
-                </tr>
               </tbody>
             </table>
 
