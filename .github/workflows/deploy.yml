@@ -30,8 +30,8 @@ jobs:
       - name: Build static site
         run: bun run build:pages
 
-      - name: Copy index.html as 404.html for SPA routing
-        run: cp dist/index.html dist/404.html
+      - name: Use the built entry as index.html and 404.html for SPA routing
+        run: cp dist/pages.html dist/index.html && cp dist/index.html dist/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
