@@ -62,7 +62,34 @@ function CookiePolicy() {
 
           <div>
             <h2 className="text-lg font-semibold mb-2">Cookie di terze parti</h2>
-            <p>Il sito non installa cookie di terze parti. Il font Google Fonts (Manrope) viene caricato tramite CDN Google; Google potrebbe raccogliere dati di accesso (indirizzo IP, tipo di browser) secondo la propria <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">informativa privacy</a>. In alternativa, il font è già incluso nel pacchetto del sito e non richiede connessioni esterne.</p>
+            <p>Il sito utilizza i seguenti servizi di terze parti che possono installare cookie:</p>
+
+            <table style={{ width: "100%", marginTop: 16, borderCollapse: "collapse", fontSize: 13 }}>
+              <thead>
+                <tr style={{ borderBottom: "2px solid var(--border)" }}>
+                  <th style={{ textAlign: "left", padding: "8px 12px 8px 0", fontWeight: 600 }}>Servizio</th>
+                  <th style={{ textAlign: "left", padding: "8px 12px", fontWeight: 600 }}>Finalità</th>
+                  <th style={{ textAlign: "left", padding: "8px 12px", fontWeight: 600 }}>Tipo</th>
+                  <th style={{ textAlign: "left", padding: "8px 0 8px 12px", fontWeight: 600 }}>Informativa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                  <td style={{ padding: "10px 12px 10px 0", fontWeight: 500 }}>Google Analytics 4</td>
+                  <td style={{ padding: "10px 12px" }}>Analisi statistica del traffico (pagine visitate, durata sessione, provenienza geografica)</td>
+                  <td style={{ padding: "10px 12px" }}>Analitico — terza parte</td>
+                  <td style={{ padding: "10px 0 10px 12px" }}><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Google Privacy Policy</a></td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                  <td style={{ padding: "10px 12px 10px 0", fontWeight: 500 }}>Google Fonts</td>
+                  <td style={{ padding: "10px 12px" }}>Caricamento del font Manrope tramite CDN Google</td>
+                  <td style={{ padding: "10px 12px" }}>Tecnico — terza parte</td>
+                  <td style={{ padding: "10px 0 10px 12px" }}><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Google Privacy Policy</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p className="mt-4">I dati raccolti da Google Analytics sono anonimizzati e aggregati; non vengono utilizzati per identificare singoli utenti. L'IP viene anonimizzato prima della trasmissione a Google. Cliccando <strong>"Solo necessari"</strong> nel banner, i cookie analitici non vengono attivati.</p>
           </div>
 
           <div>
