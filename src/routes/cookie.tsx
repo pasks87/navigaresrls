@@ -112,7 +112,8 @@ function CookiePolicy() {
           <div>
             <h2 className="text-lg font-semibold mb-2">Titolare del trattamento</h2>
             <p>
-              Navigare SRLS — <a href="mailto:navigaresrls@gmail.com" className="underline">navigaresrls@gmail.com</a><br />
+              Navigare SRLS — P.IVA 05668510653<br />
+              <a href="mailto:navigaresrls@gmail.com" className="underline">navigaresrls@gmail.com</a><br />
               Per ulteriori informazioni consulta l'<Link to="/privacy" className="underline">Informativa Privacy</Link>.
             </p>
           </div>
