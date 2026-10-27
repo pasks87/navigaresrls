@@ -35,7 +35,6 @@ function Privacy() {
             <h2 className="text-lg font-semibold mb-2">1. Titolare del trattamento</h2>
             <p>
               <strong>Navigare SRLS</strong><br />
-              C.F./P.IVA: 05668510653<br />
               E-mail: <a href="mailto:navigaresrls@gmail.com" className="underline">navigaresrls@gmail.com</a><br />
               PEC: navigaresrls@pec.it<br />
               Tel.: <a href="tel:+393356624576" className="underline">+39 335 662 4576</a>
