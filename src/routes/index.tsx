@@ -41,7 +41,7 @@ function Index() {
       <header className="site-header">
         <div className="site-width header-inner">
           <a className="brand" href="#inizio" aria-label="Navigare SRLS, inizio pagina">
-            <img src={logo.url} alt="Logo Navigare SRLS" width={80} height={56} />
+            <img src={logo.url} alt="Logo Navigare SRLS" width={66} height={64} />
             <div className="brand-name">NAVIGARE <span>PITTURAZIONE E RISANAMENTO · SRLS</span></div>
           </a>
           <nav className="desktop-nav" aria-label="Navigazione principale">
