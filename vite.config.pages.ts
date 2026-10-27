@@ -7,5 +7,11 @@ export default defineConfig({
   plugins: [tailwindcss(), react(), tsConfigPaths()],
   build: {
     outDir: "dist",
+    rollupOptions: {
+      // The entry is pages.html (not index.html) so the project root stays
+      // free of a static index.html, which would shadow the app shell on the
+      // published Lovable deployment.
+      input: "pages.html",
+    },
   },
 });
