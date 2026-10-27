@@ -4,7 +4,7 @@ import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Awa
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/interior-hero.jpg";
 import facade from "@/assets/facade.jpg";
-import logo from "@/assets/navigare-logo.asset.json";
+const logo = { url: "/navigare-logo.png" };
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
