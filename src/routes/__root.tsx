@@ -78,6 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
+      { name: "google-site-verification", content: "Z69t-K5tVt6x_CWSuxTuP0sG2mE6u-w-_GUWpKezmE4" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Navigare SRLS | Pitturazione e risanamento" },
       { name: "description", content: "Pitturazione professionale di interni, esterni e condomini. Navigare SRLS: esperienza tecnica e cura dei dettagli." },
