@@ -3,9 +3,9 @@ import { useState } from "react";
 import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Award, Paintbrush, ClipboardCheck, Building2, Droplets, SwatchBook, Umbrella } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const logo = { url: "/navigare-logo.png" };
-const heroImg = "/works/exterior-hero.jpg";
-const interiorImg = "/works/interior-living.jpg";
-const exteriorImg = "/works/exterior-detail.jpg";
+const heroImg = "/works/interior-living.jpg";
+const interiorImg = "/works/interior-bedroom.jpg";
+const exteriorImg = "/works/exterior-hero.jpg";
 const aboutImg = "/works/waterproofing-done.jpg";
 
 export const Route = createFileRoute("/")({
@@ -56,7 +56,7 @@ function Index() {
       </header>
       <main id="inizio">
         <section className="hero" aria-labelledby="hero-title">
-          <img className="hero-photo" src={heroImg} alt="Facciata esterna con intonaco e finiture curate — lavoro Navigare SRLS" width={810} height={1080} fetchPriority="high" />
+          <img className="hero-photo" src={heroImg} alt="Interno risanato con pareti tinteggiate e pavimento lucido — lavoro Navigare SRLS" width={1200} height={900} fetchPriority="high" />
           <div className="site-width hero-inner">
             <p className="eyebrow">Navigare SRLS · Dal 2018</p>
             <h1 id="hero-title">Pitturazione<br />e risanamento.<br /><em>Una nuova vita<br />ai tuoi spazi.</em></h1>
