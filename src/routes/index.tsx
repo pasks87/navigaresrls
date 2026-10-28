@@ -35,21 +35,21 @@ const values = [
 ];
 
 const galleryPhotos = [
-  { src: "/works/exterior-hero.jpg",       alt: "Facciata esterna con intonaco e finiture curate",                    caption: "Intonaco e finiture esterne",                           w: 1080, h: 1440 },
-  { src: "/works/waterproofing-done.jpg",  alt: "Impermeabilizzazione tetto con guaina elastomerica rossa",           caption: "Impermeabilizzazione · guaina elastomerica rossa",      w: 1440, h: 1080 },
-  { src: "/works/exterior-detail.jpg",     alt: "Muratura esterna con travi a vista e gronda",                        caption: "Muratura, gronda e travi a vista",                      w: 1080, h: 1440 },
-  { src: "/works/roof-done.jpg",           alt: "Grande superficie impermeabilizzata con guaina nera dall'alto",      caption: "Impermeabilizzazione su grande superficie condominiale", w: 1440, h: 1080 },
-  { src: "/works/terrace-done.jpg",        alt: "Terrazza residenziale completata con pavimentazione e montagne",     caption: "Terrazza residenziale completata",                      w: 1080, h: 1440 },
-  { src: "/works/roof-primer.jpg",         alt: "Applicazione primer su tetto prima della guaina bituminosa",         caption: "Applicazione primer · preparazione impermeabilizzazione", w: 1440, h: 1080 },
-  { src: "/works/roof-rolls-city.jpg",     alt: "Rotoli di guaina bituminosa pronti per la posa su tetto urbano",    caption: "Preparazione cantiere · guaine impermeabilizzanti",     w: 1080, h: 1440 },
-  { src: "/works/roof-rolls-country.jpg",  alt: "Rotoli di guaina bituminosa pronti per la posa in area rurale",     caption: "Materiali in cantiere · guaine elastomeriche",          w: 1440, h: 1080 },
-  { src: "/works/screed-rebar.jpg",        alt: "Rete di armatura metallica posata prima del getto del massetto",    caption: "Rete di armatura · preparazione massetto",              w: 1080, h: 1440 },
-  { src: "/works/screed-work.jpg",         alt: "Operaio durante la posa del massetto armato",                       caption: "Posa massetto armato su rete metallica",                w: 1440, h: 1080 },
-  { src: "/works/screed-pour.jpg",         alt: "Massetto in corso di lavorazione con livellamento a regola d'arte", caption: "Massetto in lavorazione · livellamento",                w: 1080, h: 1440 },
-  { src: "/works/interior-bedroom.jpg",    alt: "Camera risanata con pavimento lucido e pareti tinteggiate",         caption: "Pitturazione e risanamento interno",                    w: 1080, h: 1440 },
-  { src: "/works/interior-living.jpg",     alt: "Soggiorno con pareti tinteggiate e affaccio sulla terrazza",        caption: "Tinteggiatura soggiorno",                               w: 1440, h: 1080 },
-  { src: "/works/interior-sofa.jpg",       alt: "Interno con travi a vista e pareti tinteggiate",                    caption: "Pitturazione interni · travi a vista",                  w: 1080, h: 1440 },
-  { src: "/works/interior-study.jpg",      alt: "Studio con pareti bianche e pavimento in legno",                    caption: "Tinteggiatura studio · pavimento legno",                w: 1080, h: 1440 },
+  { src: "/works/exterior-hero.jpg",       alt: "Facciata esterna con intonaco e finiture curate",                    caption: "Intonaco e finiture esterne",                           w: 1200, h: 1600 },
+  { src: "/works/waterproofing-done.jpg",  alt: "Impermeabilizzazione tetto con guaina elastomerica rossa",           caption: "Impermeabilizzazione · guaina elastomerica rossa",      w: 1600, h: 1200 },
+  { src: "/works/exterior-detail.jpg",     alt: "Muratura esterna con travi a vista e gronda",                        caption: "Muratura, gronda e travi a vista",                      w: 1200, h: 1600 },
+  { src: "/works/roof-done.jpg",           alt: "Grande superficie impermeabilizzata con guaina nera dall'alto",      caption: "Impermeabilizzazione su grande superficie condominiale", w: 1600, h: 1200 },
+  { src: "/works/terrace-done.jpg",        alt: "Terrazza residenziale completata con pavimentazione e montagne",     caption: "Terrazza residenziale completata",                      w: 1200, h: 1600 },
+  { src: "/works/roof-primer.jpg",         alt: "Applicazione primer su tetto prima della guaina bituminosa",         caption: "Applicazione primer · preparazione impermeabilizzazione", w: 1600, h: 1200 },
+  { src: "/works/roof-rolls-city.jpg",     alt: "Rotoli di guaina bituminosa pronti per la posa su tetto urbano",    caption: "Preparazione cantiere · guaine impermeabilizzanti",     w: 1200, h: 1600 },
+  { src: "/works/roof-rolls-country.jpg",  alt: "Rotoli di guaina bituminosa pronti per la posa in area rurale",     caption: "Materiali in cantiere · guaine elastomeriche",          w: 1600, h: 1200 },
+  { src: "/works/screed-rebar.jpg",        alt: "Rete di armatura metallica posata prima del getto del massetto",    caption: "Rete di armatura · preparazione massetto",              w: 1200, h: 1600 },
+  { src: "/works/screed-work.jpg",         alt: "Operaio durante la posa del massetto armato",                       caption: "Posa massetto armato su rete metallica",                w: 1600, h: 1200 },
+  { src: "/works/screed-pour.jpg",         alt: "Massetto in corso di lavorazione con livellamento a regola d'arte", caption: "Massetto in lavorazione · livellamento",                w: 1200, h: 1600 },
+  { src: "/works/interior-bedroom.jpg",    alt: "Camera risanata con pavimento lucido e pareti tinteggiate",         caption: "Pitturazione e risanamento interno",                    w: 1200, h: 1600 },
+  { src: "/works/interior-living.jpg",     alt: "Soggiorno con pareti tinteggiate e affaccio sulla terrazza",        caption: "Tinteggiatura soggiorno",                               w: 1600, h: 1200 },
+  { src: "/works/interior-sofa.jpg",       alt: "Interno con travi a vista e pareti tinteggiate",                    caption: "Pitturazione interni · travi a vista",                  w: 1200, h: 1600 },
+  { src: "/works/interior-study.jpg",      alt: "Studio con pareti bianche e pavimento in legno",                    caption: "Tinteggiatura studio · pavimento legno",                w: 1200, h: 1600 },
 ];
 
 function GalleryCarousel() {
