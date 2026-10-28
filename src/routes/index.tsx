@@ -91,33 +91,65 @@ function Index() {
             <p>Foto reali dei nostri interventi: impermeabilizzazioni, risanamenti, finiture esterne e interni completati.</p>
           </div>
           <div className="gallery-grid">
-            <figure className="gallery-item gallery-item--wide">
-              <img src="/works/waterproofing-done.jpg" alt="Impermeabilizzazione tetto completata con guaina rossa" loading="lazy" width={1200} height={900} />
-              <figcaption>Impermeabilizzazione tetto · guaina elastomerica rossa</figcaption>
-            </figure>
             <figure className="gallery-item">
               <img src="/works/exterior-hero.jpg" alt="Facciata esterna con intonaco e finiture curate" loading="lazy" width={810} height={1080} />
               <figcaption>Intonaco e finiture esterne</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/waterproofing-done.jpg" alt="Impermeabilizzazione tetto completata con guaina rossa" loading="lazy" width={1200} height={900} />
+              <figcaption>Impermeabilizzazione tetto · guaina elastomerica rossa</figcaption>
             </figure>
             <figure className="gallery-item">
               <img src="/works/exterior-detail.jpg" alt="Muratura esterna con travi a vista e gronda" loading="lazy" width={675} height={900} />
               <figcaption>Muratura, gronda e travi a vista</figcaption>
             </figure>
             <figure className="gallery-item">
+              <img src="/works/roof-done.jpg" alt="Grande superficie impermeabilizzata con guaina nera vista dall'alto" loading="lazy" width={1440} height={1080} />
+              <figcaption>Impermeabilizzazione su grande superficie condominiale</figcaption>
+            </figure>
+            <figure className="gallery-item">
               <img src="/works/terrace-done.jpg" alt="Terrazza residenziale completata con pavimentazione e vista montagne" loading="lazy" width={675} height={900} />
               <figcaption>Terrazza residenziale completata</figcaption>
             </figure>
-            <figure className="gallery-item gallery-item--wide">
-              <img src="/works/screed-work.jpg" alt="Posa massetto armato con rete metallica" loading="lazy" width={1200} height={900} />
+            <figure className="gallery-item">
+              <img src="/works/roof-primer.jpg" alt="Applicazione primer su tetto prima della guaina" loading="lazy" width={1200} height={900} />
+              <figcaption>Applicazione primer · preparazione per impermeabilizzazione</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/roof-rolls-city.jpg" alt="Rotoli di guaina bituminosa pronti per la posa su tetto urbano" loading="lazy" width={675} height={900} />
+              <figcaption>Preparazione cantiere · guaine per impermeabilizzazione</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/roof-rolls-country.jpg" alt="Rotoli di guaina bituminosa pronti per la posa" loading="lazy" width={1200} height={900} />
+              <figcaption>Materiali in cantiere · guaine elastomeriche</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/screed-rebar.jpg" alt="Rete di armatura metallica posata prima del massetto" loading="lazy" width={675} height={900} />
+              <figcaption>Rete di armatura · preparazione massetto</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/screed-work.jpg" alt="Operaio durante la posa del massetto armato" loading="lazy" width={1200} height={900} />
               <figcaption>Posa massetto armato su rete metallica</figcaption>
             </figure>
             <figure className="gallery-item">
-              <img src="/works/interior-bedroom.jpg" alt="Interno risanato con pavimento lucido e pareti tinteggiate" loading="lazy" width={675} height={900} />
+              <img src="/works/screed-pour.jpg" alt="Massetto in corso di lavorazione con livellamento" loading="lazy" width={675} height={900} />
+              <figcaption>Massetto in lavorazione · livellamento</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/interior-bedroom.jpg" alt="Camera risanata con pavimento lucido e pareti tinteggiate" loading="lazy" width={675} height={900} />
               <figcaption>Pitturazione e risanamento interno</figcaption>
             </figure>
-            <figure className="gallery-item gallery-item--wide">
-              <img src="/works/roof-done.jpg" alt="Grande superficie impermeabilizzata con guaina nera vista dall'alto" loading="lazy" width={1440} height={1080} />
-              <figcaption>Impermeabilizzazione su grande superficie condominiale</figcaption>
+            <figure className="gallery-item">
+              <img src="/works/interior-living.jpg" alt="Soggiorno con pareti tinteggiate e vista sulla terrazza" loading="lazy" width={1200} height={900} />
+              <figcaption>Tinteggiatura soggiorno e terrazza</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/interior-sofa.jpg" alt="Interno con travi a vista e pareti tinteggiate" loading="lazy" width={675} height={900} />
+              <figcaption>Pitturazione interni · travi a vista</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/interior-study.jpg" alt="Studio con pareti tinteggiate e pavimento in legno" loading="lazy" width={675} height={900} />
+              <figcaption>Tinteggiatura studio · pavimento legno</figcaption>
             </figure>
           </div>
         </section>
