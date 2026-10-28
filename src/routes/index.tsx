@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Award, Paintbrush, ClipboardCheck, Building2, Droplets, SwatchBook, Umbrella } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/interior-hero.jpg";
@@ -33,6 +33,45 @@ const values = [
   { title: "Affidabilità concreta", text: "Rispetto dei tempi e del preventivo, attenzione agli ambienti e pulizia del cantiere." },
   { title: "Cura anche dopo", text: "Lavori a regola d’arte e assistenza post-intervento. Un punto di riferimento, anche a lavoro concluso." },
 ];
+
+const galleryPhotos = [
+  { src: "/works/exterior-hero.jpg",       alt: "Facciata esterna con intonaco e finiture curate",                    caption: "Intonaco e finiture esterne",                          w: 810,  h: 1080 },
+  { src: "/works/waterproofing-done.jpg",  alt: "Impermeabilizzazione tetto con guaina elastomerica rossa",           caption: "Impermeabilizzazione · guaina elastomerica rossa",     w: 1200, h: 900  },
+  { src: "/works/exterior-detail.jpg",     alt: "Muratura esterna con travi a vista e gronda",                        caption: "Muratura, gronda e travi a vista",                     w: 675,  h: 900  },
+  { src: "/works/roof-done.jpg",           alt: "Grande superficie impermeabilizzata con guaina nera dall'alto",      caption: "Impermeabilizzazione su grande superficie condominiale",w: 1440, h: 1080 },
+  { src: "/works/terrace-done.jpg",        alt: "Terrazza residenziale completata con pavimentazione e montagne",     caption: "Terrazza residenziale completata",                     w: 675,  h: 900  },
+  { src: "/works/roof-primer.jpg",         alt: "Applicazione primer su tetto prima della guaina bituminosa",         caption: "Applicazione primer · preparazione impermeabilizzazione",w:1200, h: 900  },
+  { src: "/works/roof-rolls-city.jpg",     alt: "Rotoli di guaina bituminosa pronti per la posa su tetto urbano",    caption: "Preparazione cantiere · guaine impermeabilizzanti",    w: 675,  h: 900  },
+  { src: "/works/roof-rolls-country.jpg",  alt: "Rotoli di guaina bituminosa pronti per la posa in area rurale",     caption: "Materiali in cantiere · guaine elastomeriche",         w: 1200, h: 900  },
+  { src: "/works/screed-rebar.jpg",        alt: "Rete di armatura metallica posata prima del getto del massetto",    caption: "Rete di armatura · preparazione massetto",             w: 675,  h: 900  },
+  { src: "/works/screed-work.jpg",         alt: "Operaio durante la posa del massetto armato",                       caption: "Posa massetto armato su rete metallica",               w: 1200, h: 900  },
+  { src: "/works/screed-pour.jpg",         alt: "Massetto in corso di lavorazione con livellamento a regola d'arte", caption: "Massetto in lavorazione · livellamento",               w: 675,  h: 900  },
+  { src: "/works/interior-bedroom.jpg",    alt: "Camera risanata con pavimento lucido e pareti tinteggiate",         caption: "Pitturazione e risanamento interno",                   w: 675,  h: 900  },
+  { src: "/works/interior-living.jpg",     alt: "Soggiorno con pareti tinteggiate e affaccio sulla terrazza",        caption: "Tinteggiatura soggiorno",                              w: 1200, h: 900  },
+  { src: "/works/interior-sofa.jpg",       alt: "Interno con travi a vista e pareti tinteggiate",                   caption: "Pitturazione interni · travi a vista",                 w: 675,  h: 900  },
+  { src: "/works/interior-study.jpg",      alt: "Studio con pareti bianche e pavimento in legno",                   caption: "Tinteggiatura studio · pavimento legno",               w: 675,  h: 900  },
+];
+
+function GalleryCarousel() {
+  const ref = useRef<HTMLDivElement>(null);
+  const scroll = (dir: "left" | "right") => {
+    ref.current?.scrollBy({ left: dir === "right" ? 480 : -480, behavior: "smooth" });
+  };
+  return (
+    <div className="gallery-carousel-wrap">
+      <button className="gallery-arrow gallery-arrow--left"  onClick={() => scroll("left")}  aria-label="Foto precedente"><ArrowRight style={{ transform: "rotate(180deg)" }} /></button>
+      <button className="gallery-arrow gallery-arrow--right" onClick={() => scroll("right")} aria-label="Foto successiva"><ArrowRight /></button>
+      <div className="gallery-carousel" ref={ref} role="list">
+        {galleryPhotos.map((p) => (
+          <figure key={p.src} className="gallery-slide" role="listitem">
+            <img src={p.src} alt={p.alt} loading="lazy" width={p.w} height={p.h} />
+            <figcaption>{p.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,73 +124,12 @@ function Index() {
           <div className="about-image"><img src={facade} loading="lazy" width={1024} height={1024} alt="Dettagli architettonici di una facciata" /><div className="experience"><strong>40</strong><span>anni di esperienza<br />alla direzione tecnica</span></div></div>
           <div className="about-copy"><p className="eyebrow">Chi siamo</p><h2 id="about-title">La cura di un artigiano.<br />La visione di un ingegnere.</h2><p>NAVIGARE SRLS nasce nel 2018 per offrire un servizio di pittura professionale, preciso e duraturo per appartamenti, uffici e condomini.</p><p>Alla guida dell’impresa, il Legale Rappresentante e Direttore Tecnico è un Ingegnere Ambientale e Edile con un’esperienza personale e tecnica quarantennale nel settore edile, nel risanamento e nella gestione di cantieri civili e condominiali.</p><p>Affianchiamo alla qualità estetica una solida consulenza su materiali, cicli di pittura e problematiche di umidità.</p><div className="check-row"><Check /> Competenza tecnica in ogni fase del lavoro</div><div className="check-row"><Check /> Finiture lisce, spatolati, rasature e stuccature</div></div>
         </div></section>
-        <section id="lavori" className="section site-width" aria-labelledby="gallery-title">
-          <div className="section-heading">
+        <section id="lavori" className="section" aria-labelledby="gallery-title">
+          <div className="site-width section-heading" style={{ marginBottom: 28 }}>
             <div><p className="eyebrow">Lavori realizzati</p><h2 id="gallery-title">Ogni cantiere<br />racconta una storia.</h2></div>
             <p>Foto reali dei nostri interventi: impermeabilizzazioni, risanamenti, finiture esterne e interni completati.</p>
           </div>
-          <div className="gallery-grid">
-            <figure className="gallery-item">
-              <img src="/works/exterior-hero.jpg" alt="Facciata esterna con intonaco e finiture curate" loading="lazy" width={810} height={1080} />
-              <figcaption>Intonaco e finiture esterne</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/waterproofing-done.jpg" alt="Impermeabilizzazione tetto completata con guaina rossa" loading="lazy" width={1200} height={900} />
-              <figcaption>Impermeabilizzazione tetto · guaina elastomerica rossa</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/exterior-detail.jpg" alt="Muratura esterna con travi a vista e gronda" loading="lazy" width={675} height={900} />
-              <figcaption>Muratura, gronda e travi a vista</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/roof-done.jpg" alt="Grande superficie impermeabilizzata con guaina nera vista dall'alto" loading="lazy" width={1440} height={1080} />
-              <figcaption>Impermeabilizzazione su grande superficie condominiale</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/terrace-done.jpg" alt="Terrazza residenziale completata con pavimentazione e vista montagne" loading="lazy" width={675} height={900} />
-              <figcaption>Terrazza residenziale completata</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/roof-primer.jpg" alt="Applicazione primer su tetto prima della guaina" loading="lazy" width={1200} height={900} />
-              <figcaption>Applicazione primer · preparazione per impermeabilizzazione</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/roof-rolls-city.jpg" alt="Rotoli di guaina bituminosa pronti per la posa su tetto urbano" loading="lazy" width={675} height={900} />
-              <figcaption>Preparazione cantiere · guaine per impermeabilizzazione</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/roof-rolls-country.jpg" alt="Rotoli di guaina bituminosa pronti per la posa" loading="lazy" width={1200} height={900} />
-              <figcaption>Materiali in cantiere · guaine elastomeriche</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/screed-rebar.jpg" alt="Rete di armatura metallica posata prima del massetto" loading="lazy" width={675} height={900} />
-              <figcaption>Rete di armatura · preparazione massetto</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/screed-work.jpg" alt="Operaio durante la posa del massetto armato" loading="lazy" width={1200} height={900} />
-              <figcaption>Posa massetto armato su rete metallica</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/screed-pour.jpg" alt="Massetto in corso di lavorazione con livellamento" loading="lazy" width={675} height={900} />
-              <figcaption>Massetto in lavorazione · livellamento</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/interior-bedroom.jpg" alt="Camera risanata con pavimento lucido e pareti tinteggiate" loading="lazy" width={675} height={900} />
-              <figcaption>Pitturazione e risanamento interno</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/interior-living.jpg" alt="Soggiorno con pareti tinteggiate e vista sulla terrazza" loading="lazy" width={1200} height={900} />
-              <figcaption>Tinteggiatura soggiorno e terrazza</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/interior-sofa.jpg" alt="Interno con travi a vista e pareti tinteggiate" loading="lazy" width={675} height={900} />
-              <figcaption>Pitturazione interni · travi a vista</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src="/works/interior-study.jpg" alt="Studio con pareti tinteggiate e pavimento in legno" loading="lazy" width={675} height={900} />
-              <figcaption>Tinteggiatura studio · pavimento legno</figcaption>
-            </figure>
-          </div>
+          <GalleryCarousel />
         </section>
         <section id="perche-sceglierci" className="section site-width" aria-labelledby="values-title"><p className="eyebrow">Perché scegliere Navigare</p><h2 id="values-title">Un buon lavoro si riconosce.<br />Anche nel tempo.</h2><div className="values">{values.map((value, i) => <article key={value.title}><span className="value-number">0{i + 1}</span><h3>{value.title}</h3><p>{value.text}</p></article>)}</div></section>
         <section id="contatti" className="contact" aria-labelledby="contact-title"><div className="site-width contact-grid"><div><p className="eyebrow">Iniziamo dal tuo progetto</p><h2 id="contact-title">Diamo nuova vita<br />ai tuoi spazi, insieme.</h2><p>Contattaci per un sopralluogo gratuito e un preventivo senza impegno. Raccontaci di cosa hai bisogno.</p></div><div className="contact-links"><a className="contact-link" href={phone}><Phone /><div><small>CHIAMACI</small><strong>+39 335 662 4576</strong></div><ArrowUpRight className="contact-arrow" /></a><a className="contact-link" href={email}><Mail /><div><small>SCRIVICI</small><strong>navigaresrls@gmail.com</strong></div><ArrowUpRight className="contact-arrow" /></a></div></div></section>
