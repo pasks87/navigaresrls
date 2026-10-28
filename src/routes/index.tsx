@@ -3,10 +3,10 @@ import { useState } from "react";
 import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Award, Paintbrush, ClipboardCheck, Building2, Droplets, SwatchBook, Umbrella } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const logo = { url: "/navigare-logo.png" };
-const heroImg = "/works/interior-living.jpg";
-const interiorImg = "/works/interior-bedroom.jpg";
+const heroImg = "/works/waterproofing-done.jpg";
+const interiorImg = "/works/interior-living.jpg";
 const exteriorImg = "/works/exterior-hero.jpg";
-const aboutImg = "/works/waterproofing-done.jpg";
+const aboutImg = "/works/exterior-detail.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -57,7 +57,7 @@ function Index() {
       </header>
       <main id="inizio" tabIndex={-1}>
         <section className="hero" aria-labelledby="hero-title">
-          <img className="hero-photo" src={heroImg} alt="Interno risanato con pareti tinteggiate e pavimento lucido — lavoro Navigare SRLS" width={1200} height={900} fetchPriority="high" />
+          <img className="hero-photo" src={heroImg} alt="Impermeabilizzazione tetto completata — lavoro Navigare SRLS" width={1200} height={900} fetchPriority="high" />
           <div className="site-width hero-inner">
             <p className="eyebrow">Navigare SRLS · Dal 2018</p>
             <h1 id="hero-title">Pitturazione<br />e risanamento.<br /><em>Una nuova vita<br />ai tuoi spazi.</em></h1>
