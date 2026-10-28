@@ -40,6 +40,7 @@ function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
+      <a href="#inizio" className="skip-link">Vai al contenuto principale</a>
       <header className="site-header">
         <div className="site-width header-inner">
           <a className="brand" href="#inizio" aria-label="Navigare SRLS, inizio pagina">
@@ -54,7 +55,7 @@ function Index() {
         </div>
         {menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Navigazione mobile">{navigation.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{label}</a>)}</nav>}
       </header>
-      <main id="inizio">
+      <main id="inizio" tabIndex={-1}>
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero-photo" src={heroImg} alt="Interno risanato con pareti tinteggiate e pavimento lucido — lavoro Navigare SRLS" width={1200} height={900} fetchPriority="high" />
           <div className="site-width hero-inner">
