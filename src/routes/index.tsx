@@ -2,9 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, ArrowRight, Phone, Mail, Menu, X, Check, ShieldCheck, Award, Paintbrush, ClipboardCheck, Building2, Droplets, SwatchBook, Umbrella } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import hero from "@/assets/interior-hero.jpg";
-import facade from "@/assets/facade.jpg";
 const logo = { url: "/navigare-logo.png" };
+const heroImg = "/works/exterior-hero.jpg";
+const interiorImg = "/works/interior-living.jpg";
+const exteriorImg = "/works/exterior-detail.jpg";
+const aboutImg = "/works/waterproofing-done.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -54,7 +56,7 @@ function Index() {
       </header>
       <main id="inizio">
         <section className="hero" aria-labelledby="hero-title">
-          <img className="hero-photo" src={hero} alt="Ambiente luminoso con pareti e finiture curate, immagine illustrativa" width={1920} height={1024} fetchPriority="high" />
+          <img className="hero-photo" src={heroImg} alt="Facciata esterna con intonaco e finiture curate — lavoro Navigare SRLS" width={810} height={1080} fetchPriority="high" />
           <div className="site-width hero-inner">
             <p className="eyebrow">Navigare SRLS · Dal 2018</p>
             <h1 id="hero-title">Pitturazione<br />e risanamento.<br /><em>Una nuova vita<br />ai tuoi spazi.</em></h1>
@@ -65,14 +67,13 @@ function Index() {
             </div>
             <p className="hero-note"><Check /> Senza impegno. Con tutta la nostra esperienza.</p>
           </div>
-          <span className="hero-caption">Immagine illustrativa</span>
         </section>
         <div className="trust-band"><div className="site-width trust-grid">{benefits.map(({icon: Icon, title, text}) => <div className="trust-item" key={title}><Icon /><div><strong>{title}</strong><span>{text}</span></div></div>)}</div></div>
         <section id="servizi" className="section site-width" aria-labelledby="services-title">
           <div className="section-heading"><div><p className="eyebrow">I nostri servizi</p><h2 id="services-title">Ogni superficie merita<br />la giusta attenzione.</h2></div><p>Dalla tinteggiatura di una stanza alla riqualificazione di un condominio: soluzioni su misura, con un unico interlocutore.</p></div>
           <div className="service-grid">
-            <article className="service-photo"><img src={hero} width={1920} height={1024} loading="lazy" alt="Finiture di un soggiorno, immagine illustrativa" /><div className="service-photo-content"><h3>Interni</h3><p>Appartamenti, uffici e negozi. Tinteggiatura, cartongesso, finiture decorative e carte da parati.</p></div></article>
-            <article className="service-photo"><img src={facade} width={1024} height={1024} loading="lazy" alt="Facciata di un edificio residenziale, immagine illustrativa" /><div className="service-photo-content"><h3>Esterni</h3><p>Facciate, balconi e ringhiere. Pitture traspiranti, antimuffa e idrorepellenti.</p></div></article>
+            <article className="service-photo"><img src={interiorImg} width={1200} height={900} loading="lazy" alt="Interno risanato con pareti tinteggiate e pavimento nuovo — lavoro Navigare SRLS" /><div className="service-photo-content"><h3>Interni</h3><p>Appartamenti, uffici e negozi. Tinteggiatura, cartongesso, finiture decorative e carte da parati.</p></div></article>
+            <article className="service-photo"><img src={exteriorImg} width={1200} height={900} loading="lazy" alt="Esterno con intonaco e finiture curate — lavoro Navigare SRLS" /><div className="service-photo-content"><h3>Esterni</h3><p>Facciate, balconi e ringhiere. Pitture traspiranti, antimuffa e idrorepellenti.</p></div></article>
             <article className="service-icon-card"><Building2 /><h3>Condomini</h3><p>Manutenzione e riqualificazione di scale, androni, facciate e coperture. Gestione dei ponteggi e lavori in quota, con competenza tecnica.</p><a className="service-link" href="#contatti">Parliamo del tuo intervento <ArrowUpRight /></a></article>
             <div className="service-lower">
               <article className="service-icon-card"><Droplets /><h3>Risanamento e antimuffa</h3><p>Trattamenti antimuffa, deumidificazione e ripristino degli intonaci ammalorati. Interventi mirati alle esigenze delle superfici.</p></article>
@@ -82,13 +83,13 @@ function Index() {
           </div>
         </section>
         <section id="chi-siamo" className="section about" aria-labelledby="about-title"><div className="site-width about-grid">
-          <div className="about-image"><img src={facade} loading="lazy" width={1024} height={1024} alt="Dettagli architettonici di una facciata, immagine illustrativa" /><div className="experience"><strong>40</strong><span>anni di esperienza<br />alla direzione tecnica</span></div></div>
+          <div className="about-image"><img src={aboutImg} loading="lazy" width={1200} height={900} alt="Impermeabilizzazione tetto completata — lavoro Navigare SRLS" /><div className="experience"><strong>40</strong><span>anni di esperienza<br />alla direzione tecnica</span></div></div>
           <div className="about-copy"><p className="eyebrow">Chi siamo</p><h2 id="about-title">La cura di un artigiano.<br />La visione di un ingegnere.</h2><p>NAVIGARE SRLS nasce nel 2018 per offrire un servizio di pittura professionale, preciso e duraturo per appartamenti, uffici e condomini.</p><p>Alla guida dell’impresa, il Legale Rappresentante e Direttore Tecnico è un Ingegnere Ambientale e Edile con un’esperienza personale e tecnica quarantennale nel settore edile, nel risanamento e nella gestione di cantieri civili e condominiali.</p><p>Affianchiamo alla qualità estetica una solida consulenza su materiali, cicli di pittura e problematiche di umidità.</p><div className="check-row"><Check /> Competenza tecnica in ogni fase del lavoro</div><div className="check-row"><Check /> Finiture lisce, spatolati, rasature e stuccature</div></div>
         </div></section>
         <section id="perche-sceglierci" className="section site-width" aria-labelledby="values-title"><p className="eyebrow">Perché scegliere Navigare</p><h2 id="values-title">Un buon lavoro si riconosce.<br />Anche nel tempo.</h2><div className="values">{values.map((value, i) => <article key={value.title}><span className="value-number">0{i + 1}</span><h3>{value.title}</h3><p>{value.text}</p></article>)}</div></section>
         <section id="contatti" className="contact" aria-labelledby="contact-title"><div className="site-width contact-grid"><div><p className="eyebrow">Iniziamo dal tuo progetto</p><h2 id="contact-title">Diamo nuova vita<br />ai tuoi spazi, insieme.</h2><p>Contattaci per un sopralluogo gratuito e un preventivo senza impegno. Raccontaci di cosa hai bisogno.</p></div><div className="contact-links"><a className="contact-link" href={phone}><Phone /><div><small>CHIAMACI</small><strong>+39 335 662 4576</strong></div><ArrowUpRight className="contact-arrow" /></a><a className="contact-link" href={email}><Mail /><div><small>SCRIVICI</small><strong>navigaresrls@gmail.com</strong></div><ArrowUpRight className="contact-arrow" /></a></div></div></section>
       </main>
-      <footer className="footer"><div className="site-width footer-inner"><strong>NAVIGARE SRLS</strong><p>© {new Date().getFullYear()} Navigare SRLS · P.IVA 05668510653 · Pitturazione interni, esterni e risanamento · Immagini illustrative</p><div className="inline-flex items-center gap-4"><Link to="/privacy" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Privacy</Link><Link to="/cookie" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Cookie</Link><a href="#inizio" className="inline-flex items-center gap-2">Torna su <ArrowUpRight className="size-3" /></a></div></div></footer>
+      <footer className="footer"><div className="site-width footer-inner"><strong>NAVIGARE SRLS</strong><p>© {new Date().getFullYear()} Navigare SRLS · P.IVA 05668510653 · Pitturazione interni, esterni e risanamento</p><div className="inline-flex items-center gap-4"><Link to="/privacy" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Privacy</Link><Link to="/cookie" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Cookie</Link><a href="#inizio" className="inline-flex items-center gap-2">Torna su <ArrowUpRight className="size-3" /></a></div></div></footer>
     </>
   );
 }
