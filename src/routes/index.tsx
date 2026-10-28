@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
 
 const phone = "tel:+393356624576";
 const email = "mailto:navigaresrls@gmail.com?subject=Richiesta%20sopralluogo%20gratuito";
-const navigation = [ ["Chi siamo", "chi-siamo"], ["I nostri servizi", "servizi"], ["Perché sceglierci", "perche-sceglierci"], ["Contatti", "contatti"] ];
+const navigation = [ ["Chi siamo", "chi-siamo"], ["I nostri servizi", "servizi"], ["I nostri lavori", "lavori"], ["Contatti", "contatti"] ];
 const benefits = [
   { icon: Award, title: "40 anni di esperienza", text: "Alla direzione tecnica" },
   { icon: ShieldCheck, title: "Qualità che dura", text: "Materiali professionali certificati" },
@@ -85,6 +85,42 @@ function Index() {
           <div className="about-image"><img src={facade} loading="lazy" width={1024} height={1024} alt="Dettagli architettonici di una facciata" /><div className="experience"><strong>40</strong><span>anni di esperienza<br />alla direzione tecnica</span></div></div>
           <div className="about-copy"><p className="eyebrow">Chi siamo</p><h2 id="about-title">La cura di un artigiano.<br />La visione di un ingegnere.</h2><p>NAVIGARE SRLS nasce nel 2018 per offrire un servizio di pittura professionale, preciso e duraturo per appartamenti, uffici e condomini.</p><p>Alla guida dell’impresa, il Legale Rappresentante e Direttore Tecnico è un Ingegnere Ambientale e Edile con un’esperienza personale e tecnica quarantennale nel settore edile, nel risanamento e nella gestione di cantieri civili e condominiali.</p><p>Affianchiamo alla qualità estetica una solida consulenza su materiali, cicli di pittura e problematiche di umidità.</p><div className="check-row"><Check /> Competenza tecnica in ogni fase del lavoro</div><div className="check-row"><Check /> Finiture lisce, spatolati, rasature e stuccature</div></div>
         </div></section>
+        <section id="lavori" className="section site-width" aria-labelledby="gallery-title">
+          <div className="section-heading">
+            <div><p className="eyebrow">Lavori realizzati</p><h2 id="gallery-title">Ogni cantiere<br />racconta una storia.</h2></div>
+            <p>Foto reali dei nostri interventi: impermeabilizzazioni, risanamenti, finiture esterne e interni completati.</p>
+          </div>
+          <div className="gallery-grid">
+            <figure className="gallery-item gallery-item--wide">
+              <img src="/works/waterproofing-done.jpg" alt="Impermeabilizzazione tetto completata con guaina rossa" loading="lazy" width={1200} height={900} />
+              <figcaption>Impermeabilizzazione tetto · guaina elastomerica rossa</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/exterior-hero.jpg" alt="Facciata esterna con intonaco e finiture curate" loading="lazy" width={810} height={1080} />
+              <figcaption>Intonaco e finiture esterne</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/exterior-detail.jpg" alt="Muratura esterna con travi a vista e gronda" loading="lazy" width={675} height={900} />
+              <figcaption>Muratura, gronda e travi a vista</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/terrace-done.jpg" alt="Terrazza residenziale completata con pavimentazione e vista montagne" loading="lazy" width={675} height={900} />
+              <figcaption>Terrazza residenziale completata</figcaption>
+            </figure>
+            <figure className="gallery-item gallery-item--wide">
+              <img src="/works/screed-work.jpg" alt="Posa massetto armato con rete metallica" loading="lazy" width={1200} height={900} />
+              <figcaption>Posa massetto armato su rete metallica</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src="/works/interior-bedroom.jpg" alt="Interno risanato con pavimento lucido e pareti tinteggiate" loading="lazy" width={675} height={900} />
+              <figcaption>Pitturazione e risanamento interno</figcaption>
+            </figure>
+            <figure className="gallery-item gallery-item--wide">
+              <img src="/works/roof-done.jpg" alt="Grande superficie impermeabilizzata con guaina nera vista dall'alto" loading="lazy" width={1440} height={1080} />
+              <figcaption>Impermeabilizzazione su grande superficie condominiale</figcaption>
+            </figure>
+          </div>
+        </section>
         <section id="perche-sceglierci" className="section site-width" aria-labelledby="values-title"><p className="eyebrow">Perché scegliere Navigare</p><h2 id="values-title">Un buon lavoro si riconosce.<br />Anche nel tempo.</h2><div className="values">{values.map((value, i) => <article key={value.title}><span className="value-number">0{i + 1}</span><h3>{value.title}</h3><p>{value.text}</p></article>)}</div></section>
         <section id="contatti" className="contact" aria-labelledby="contact-title"><div className="site-width contact-grid"><div><p className="eyebrow">Iniziamo dal tuo progetto</p><h2 id="contact-title">Diamo nuova vita<br />ai tuoi spazi, insieme.</h2><p>Contattaci per un sopralluogo gratuito e un preventivo senza impegno. Raccontaci di cosa hai bisogno.</p></div><div className="contact-links"><a className="contact-link" href={phone}><Phone /><div><small>CHIAMACI</small><strong>+39 335 662 4576</strong></div><ArrowUpRight className="contact-arrow" /></a><a className="contact-link" href={email}><Mail /><div><small>SCRIVICI</small><strong>navigaresrls@gmail.com</strong></div><ArrowUpRight className="contact-arrow" /></a></div></div></section>
       </main>
